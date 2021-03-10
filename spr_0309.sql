@@ -1,82 +1,82 @@
--- Çü º¯È¯ ÇÔ¼ö
+-- í˜• ë³€í™˜ í•¨ìˆ˜
 SELECT EMPNO, ENAME, EMPNO + '500'
---¿øÄ¢ÀûÀ¸·Î´Â ¹®ÀÚÇüÀÎ '500'ÀÇ µ¥ÀÌÅÍ´Â ¼ýÀÚÇüÀÇ ¿­¿¡ Àû¿ëÀÌ µÇÁö ¾ÊÀ¸³ª ¼ø¼ö ¼ýÀÚ·Î¸¸ ÀÌ·ç¾îÁø ¹®ÀÚÇüÀÇ °æ¿ì °æ¿ì ¾Ï½ÃÀû Çü º¯È¯(ÀÚµ¿ Çü º¯È¯)
+--ì›ì¹™ì ìœ¼ë¡œëŠ” ë¬¸ìží˜•ì¸ '500'ì˜ ë°ì´í„°ëŠ” ìˆ«ìží˜•ì˜ ì—´ì— ì ìš©ì´ ë˜ì§€ ì•Šìœ¼ë‚˜ ìˆœìˆ˜ ìˆ«ìžë¡œë§Œ ì´ë£¨ì–´ì§„ ë¬¸ìží˜•ì˜ ê²½ìš° ê²½ìš° ì•”ì‹œì  í˜• ë³€í™˜(ìžë™ í˜• ë³€í™˜)
 FROM EMP
 WHERE ENAME = 'JAMES';
 
--- ¹®ÀÚ µ¥ÀÌÅÍ·Î º¯È¯ 'TO_CHAR'
-SELECT SYSDATE, TO_CHAR(SYSDATE, 'YYYY.MM.DD AM HH24:MI:SS DAY') AS ÇöÀç_³¯Â¥_½Ã°£_¿äÀÏ
+-- ë¬¸ìž ë°ì´í„°ë¡œ ë³€í™˜ 'TO_CHAR'
+SELECT SYSDATE, TO_CHAR(SYSDATE, 'YYYY.MM.DD AM HH24:MI:SS DAY') AS í˜„ìž¬_ë‚ ì§œ_ì‹œê°„_ìš”ì¼
 FROM DUAL;
 
 /*
-¡Ý ½Ã°£ Çü½Ä ÁöÁ¤ÇÏ±â
-- HH24 : 24½Ã°£À¸·Î Ç¥Çö
-- HH, HH12 : 12½Ã°£À¸·Î Ç¥Çö
-- MI : ºÐ
-- SS : ÃÊ
-- AM, PM, A.M., P.M. : ¿ÀÀü, ¿ÀÈÄ
+â—Ž ì‹œê°„ í˜•ì‹ ì§€ì •í•˜ê¸°
+- HH24 : 24ì‹œê°„ìœ¼ë¡œ í‘œí˜„
+- HH, HH12 : 12ì‹œê°„ìœ¼ë¡œ í‘œí˜„
+- MI : ë¶„
+- SS : ì´ˆ
+- AM, PM, A.M., P.M. : ì˜¤ì „, ì˜¤í›„
 
-¡Ý ³¯Â¥ Çü½Ä ÁöÁ¤ÇÏ±â
-- CC : ¼¼±â
-- YYYY, RRRR : ¿¬µµ (4ÀÚ¸® ¼ýÀÚ)
-- YY, RR : ¿¬µµ (2ÀÚ¸® ¼ýÀÚ)
-- MM : ¿ù (2ÀÚ¸® ¼ýÀÚ)
-- MON : ¿ù(¾ð¾îº° ¿ù ÀÌ¸§ ¾àÀÚ)
-- MONTH : ¿ù(¾ð¾îº° ¿ù ÀÌ¸§ ÀüÃ¼)
-- DD : ÀÏ (2ÀÚ¸® ¼ýÀÚ)
-- DDD : 1~366 (1³â Áß ¸çÄ¥)
-- DY : ¿äÀÏ (¾ð¾îº° ¿äÀÏ ÀÌ¸§ ¾àÀÚ)
-- DAY : ¿äÀÏ (¾ð¾îº° ¿äÀÏ ÀÌ¸§ ÀüÃ¼)
-- W : 1~53 (1³â Áß ¸î¹øÂ° ÁÖ)
+â—Ž ë‚ ì§œ í˜•ì‹ ì§€ì •í•˜ê¸°
+- CC : ì„¸ê¸°
+- YYYY, RRRR : ì—°ë„ (4ìžë¦¬ ìˆ«ìž)
+- YY, RR : ì—°ë„ (2ìžë¦¬ ìˆ«ìž)
+- MM : ì›” (2ìžë¦¬ ìˆ«ìž)
+- MON : ì›”(ì–¸ì–´ë³„ ì›” ì´ë¦„ ì•½ìž)
+- MONTH : ì›”(ì–¸ì–´ë³„ ì›” ì´ë¦„ ì „ì²´)
+- DD : ì¼ (2ìžë¦¬ ìˆ«ìž)
+- DDD : 1~366 (1ë…„ ì¤‘ ë©°ì¹ )
+- DY : ìš”ì¼ (ì–¸ì–´ë³„ ìš”ì¼ ì´ë¦„ ì•½ìž)
+- DAY : ìš”ì¼ (ì–¸ì–´ë³„ ìš”ì¼ ì´ë¦„ ì „ì²´)
+- W : 1~53 (1ë…„ ì¤‘ ëª‡ë²ˆì§¸ ì£¼)
 */
 
--- Æ¯Á¤ ¾ð¾î¿¡ ¸ÂÃç ³¯Â¥ Ãâ·ÂÇÏ±â
+-- íŠ¹ì • ì–¸ì–´ì— ë§žì¶° ë‚ ì§œ ì¶œë ¥í•˜ê¸°
 /*
-TO_CHAR([³¯Â¥ µ¥ÀÌÅÍ], '[Ãâ·ÂµÇ±æ ¿øÇÏ´Â ¹®ÀÚ ÇüÅÂ]', 'NLS_DATE_LANGUAGE = ¾ð¾î');
+TO_CHAR([ë‚ ì§œ ë°ì´í„°], '[ì¶œë ¥ë˜ê¸¸ ì›í•˜ëŠ” ë¬¸ìž í˜•íƒœ]', 'NLS_DATE_LANGUAGE = ì–¸ì–´');
 */
-SELECT TO_CHAR(SYSDATE, 'MON.DAY', 'NLS_DATE_LANGUAGE = KOREAN') AS ÇÑ±Û,
-TO_CHAR(SYSDATE, 'MON.DAY', 'NLS_DATE_LANGUAGE = ENGLISH') AS ¿µ¹®,
-TO_CHAR(SYSDATE, 'MON.DAY', 'NLS_DATE_LANGUAGE = JAPANESE') AS ÀÏ¹®
+SELECT TO_CHAR(SYSDATE, 'MON.DAY', 'NLS_DATE_LANGUAGE = KOREAN') AS í•œê¸€,
+TO_CHAR(SYSDATE, 'MON.DAY', 'NLS_DATE_LANGUAGE = ENGLISH') AS ì˜ë¬¸,
+TO_CHAR(SYSDATE, 'MON.DAY', 'NLS_DATE_LANGUAGE = JAPANESE') AS ì¼ë¬¸
 FROM DUAL;
 
--- ¼ýÀÚ µ¥ÀÌÅÍ Çü½ÄÀ» ÁöÁ¤ÇÏ¿© Ãâ·ÂÇÏ±â
+-- ìˆ«ìž ë°ì´í„° í˜•ì‹ì„ ì§€ì •í•˜ì—¬ ì¶œë ¥í•˜ê¸°
 SELECT SAL,
-TO_CHAR(SAL, '999,999') AS ¼ýÀÚÇÑÀÚ¸®, --9´Â ¼ýÀÚ ÇÑÀÚ¸®¸¦ ÀÇ¹Ì(ºóÀÚ¸®¸¦ ¾È Ã¤¿ò)
-TO_CHAR(SAL, '00,999') AS ¼ýÀÚºóÀÚ¸®, -- 0Àº ºóÀÚ¸®¸¦ 0À» Ã¤¿ò
-TO_CHAR(SAL, '$999,999') AS ´Þ·¯Ç¥±â, -- $´Þ·¯ Ç¥±â
-TO_CHAR(SAL, 'L999,999') AS ¼ýÀÚÇÑÀÚ¸®, -- L ÇØ´ç Áö¿ª È­Æó·Î Ãâ·Â
-TO_CHAR(SAL, '999,999.00') AS ¼Ò¼ýÁ¡ -- .À¸·Î ¼Ò¼öÁ¡, ,À¸·Î Ãµ´ÜÀ§¸¦ ±¸ºÐ
+TO_CHAR(SAL, '999,999') AS ìˆ«ìží•œìžë¦¬, --9ëŠ” ìˆ«ìž í•œìžë¦¬ë¥¼ ì˜ë¯¸(ë¹ˆìžë¦¬ë¥¼ ì•ˆ ì±„ì›€)
+TO_CHAR(SAL, '00,999') AS ìˆ«ìžë¹ˆìžë¦¬, -- 0ì€ ë¹ˆìžë¦¬ë¥¼ 0ì„ ì±„ì›€
+TO_CHAR(SAL, '$999,999') AS ë‹¬ëŸ¬í‘œê¸°, -- $ë‹¬ëŸ¬ í‘œê¸°
+TO_CHAR(SAL, 'L999,999') AS ìˆ«ìží•œìžë¦¬, -- L í•´ë‹¹ ì§€ì—­ í™”íë¡œ ì¶œë ¥
+TO_CHAR(SAL, '999,999.00') AS ì†Œìˆ«ì  -- .ìœ¼ë¡œ ì†Œìˆ˜ì , ,ìœ¼ë¡œ ì²œë‹¨ìœ„ë¥¼ êµ¬ë¶„
 FROM EMP;
 
--- ¼ýÀÚ µ¥ÀÌÅÍ·Î º¯È¯ÇÏ´Â TO_NUMBER
+-- ìˆ«ìž ë°ì´í„°ë¡œ ë³€í™˜í•˜ëŠ” TO_NUMBER
 
 SELECT 1300 + '1500'
 FROM DUAL;
 
-SELECT TO_NUMBER('1,300', '9999') + TO_NUMBER('2,500', '9999') AS ¹®ÀÚ_¼ýÀÚ
+SELECT TO_NUMBER('1,300', '9999') + TO_NUMBER('2,500', '9999') AS ë¬¸ìž_ìˆ«ìž
 FROM DUAL;
 
--- ¹®ÀÚ µ¥ÀÌÅÍ¸¦ ³¯Â¥ µ¥ÀÌÅÍ·Î º¯È¯ÇÏ´Â TO_DATE
+-- ë¬¸ìž ë°ì´í„°ë¥¼ ë‚ ì§œ ë°ì´í„°ë¡œ ë³€í™˜í•˜ëŠ” TO_DATE
 SELECT
-TO_DATE('2021-03-09', 'YYYY.MM.DD') AS ³¯Â¥1,
-TO_DATE('20210309', 'YYYY.MM.DD') AS ³¯Â¥2
+TO_DATE('2021-03-09', 'YYYY.MM.DD') AS ë‚ ì§œ1,
+TO_DATE('20210309', 'YYYY.MM.DD') AS ë‚ ì§œ2
 FROM DUAL;
 
--- Æ¯Á¤ ³¯Â¥ ÀÌÈÄ¿¡ ÀÔ»çÇÑ »ç¿ø Ã£±â
+-- íŠ¹ì • ë‚ ì§œ ì´í›„ì— ìž…ì‚¬í•œ ì‚¬ì› ì°¾ê¸°
 SELECT *
 FROM EMP
 WHERE HIREDATE > TO_DATE('19810601', 'YYYY/MM/DD');
 
--- NULL°ªÀ» ´ëÃ¼ÇÏ´Â NVL
+-- NULLê°’ì„ ëŒ€ì²´í•˜ëŠ” NVL
 SELECT ENAME, SAL, COMM, SAL*12+COMM AS ANNSAL,
 NVL (COMM, 0), SAL*12+NVL(COMM, 0)
 FROM EMP;
 
 SELECT EMPNO, ENAME, COMM,
-NVL2(COMM, '¾Æ´Ô', '¸ÂÀ½'), NVL2(COMM, SAL*12+COMM, SAL*12)
+NVL2(COMM, 'ì•„ë‹˜', 'ë§žìŒ'), NVL2(COMM, SAL*12+COMM, SAL*12)
 FROM EMP;
 
--- DECODEÇÔ¼ö
+-- DECODEí•¨ìˆ˜
 SELECT EMPNO, ENAME, JOB, SAL,
 DECODE(JOB,
 'MANAGER', SAL*1.1,
@@ -85,9 +85,9 @@ DECODE(JOB,
 SAL*1.03) AS UPSAL
 FROM EMP;
 
--- CASE¹®
+-- CASEë¬¸
 SELECT EMPNO, ENAME, JOB, SAL,
-CASE JOB --±âÁØ µ¥ÀÌÅÍ
+CASE JOB --ê¸°ì¤€ ë°ì´í„°
 WHEN 'MANAGER' THEN SAL*1.1
 WHEN 'SALESMAN' THEN SAL*1.05
 WHEN 'ANALYST' THEN SAL
@@ -95,46 +95,46 @@ ELSE SAL * 1.03
 END AS UPSAL
 FROM EMP;
 
--- ±âÁØ µ¥ÀÌÅÍ¾øÀÌ CASE¹® »ç¿ë
+-- ê¸°ì¤€ ë°ì´í„°ì—†ì´ CASEë¬¸ ì‚¬ìš©
 SELECT EMPNO, ENAME, COMM,
 CASE
-WHEN COMM IS NULL THEN 'ÇØ´ç»çÇ× ¾øÀ½'
-WHEN COMM=0 THEN '¼ö´ç¾øÀ½'
-WHEN COMM>0 THEN '¼ö´ç:' || COMM
-END AS ¼ö´çÃ³¸®°á°ú
+WHEN COMM IS NULL THEN 'í•´ë‹¹ì‚¬í•­ ì—†ìŒ'
+WHEN COMM=0 THEN 'ìˆ˜ë‹¹ì—†ìŒ'
+WHEN COMM>0 THEN 'ìˆ˜ë‹¹:' || COMM
+END AS ìˆ˜ë‹¹ì²˜ë¦¬ê²°ê³¼
 FROM EMP;
 
--- ±×·ì ÇÔ¼ö
+-- ê·¸ë£¹ í•¨ìˆ˜
 SELECT SUM(SAL)
 FROM EMP;
 /*
-ÁÖ¿ä ±×·ì ÇÔ¼ö
-SUM : ÁöÁ¤µÈ µ¥ÀÌÅÍÀÇ ÇÕ
-COUNT : ÁöÁ¤µÈ µ¥ÀÌÅÍÀÇ °³¼ö
-MAX : ÁöÁ¤ÇÑ µ¥ÀÌÅÍ Áß ÃÖ´ñ°ª
-MIN : ÁöÁ¤ÇÑ µ¥ÀÌÅÍ Áß ÃÖ¼Ú°ª
-AVG : ÁöÁ¤ÇÑ µ¥ÀÌÅÍÀÇ Æò±Õ°ª ¹ÝÈ¯
+ì£¼ìš” ê·¸ë£¹ í•¨ìˆ˜
+SUM : ì§€ì •ëœ ë°ì´í„°ì˜ í•©
+COUNT : ì§€ì •ëœ ë°ì´í„°ì˜ ê°œìˆ˜
+MAX : ì§€ì •í•œ ë°ì´í„° ì¤‘ ìµœëŒ“ê°’
+MIN : ì§€ì •í•œ ë°ì´í„° ì¤‘ ìµœì†Ÿê°’
+AVG : ì§€ì •í•œ ë°ì´í„°ì˜ í‰ê· ê°’ ë°˜í™˜
 */
 
---GROUP BYÀýÀ» »ç¿ëÇÏÁö ¾ÊÀ¸¸é Å×ÀÌºí ÀüÃ¼ ÇàÀÌ ÇÏ³ªÀÇ ±×·ìÀ¸·Î Çü¼ºµÊ
+--GROUP BYì ˆì„ ì‚¬ìš©í•˜ì§€ ì•Šìœ¼ë©´ í…Œì´ë¸” ì „ì²´ í–‰ì´ í•˜ë‚˜ì˜ ê·¸ë£¹ìœ¼ë¡œ í˜•ì„±ë¨
 /*
-SELECT ENAME, SUM(SAL) <- ÀÌÃ³·³ ´ÜÀÏÇà ÇÔ¼ö¿Í ´ÙÁßÇà ÇÔ¼ö´Â ÀÌ·¯ÇÑ Ç¥±â ÇüÅÂ·Î´Â »ç¿ëÇÒ ¼ö ¾ø´Ù.
+SELECT ENAME, SUM(SAL) <- ì´ì²˜ëŸ¼ ë‹¨ì¼í–‰ í•¨ìˆ˜ì™€ ë‹¤ì¤‘í–‰ í•¨ìˆ˜ëŠ” ì´ëŸ¬í•œ í‘œê¸° í˜•íƒœë¡œëŠ” ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤.
 */
-SELECT SUM(COMM) -- SUMÀº NULLÀÏ °æ¿ì °ªÀÌ ¾ø´Ù°í ÆÇ´ÜÇÏ°í ÀÚÃ¼ »ý·«ÇÔ
+SELECT SUM(COMM) -- SUMì€ NULLì¼ ê²½ìš° ê°’ì´ ì—†ë‹¤ê³  íŒë‹¨í•˜ê³  ìžì²´ ìƒëžµí•¨
 FROM EMP;
 
--- µ¥ÀÌÅÍ °³¼ö¸¦ Ãâ·ÂÇÏ´Â COUNT
+-- ë°ì´í„° ê°œìˆ˜ë¥¼ ì¶œë ¥í•˜ëŠ” COUNT
 SELECT COUNT(*)
 FROM EMP;
 
 SELECT COUNT(*)
 FROM EMP
 WHERE DEPTNO=30;
--- ¡Ø NULL°ªÀº Ä«¿îÆ® ¾ÈµÊ
+-- â€» NULLê°’ì€ ì¹´ìš´íŠ¸ ì•ˆë¨
 
 SELECT COUNT(COMM)
 FROM EMP;
---WHERE COMM IS NOT NULL; (À» »ç¿ëÇØµµ °á°ú°ªÀº ¶È°°ÀÌ Ãâ·ÂµÈ´Ù.)
+--WHERE COMM IS NOT NULL; (ì„ ì‚¬ìš©í•´ë„ ê²°ê³¼ê°’ì€ ë˜‘ê°™ì´ ì¶œë ¥ëœë‹¤.)
 
 SELECT MAX(SAL)
 FROM EMP
@@ -151,7 +151,7 @@ SELECT AVG(COMM)
 FROM EMP
 WHERE DEPTNO=30;
 
--- °á°ú °ªÀ» ¿øÇÏ´Â ¿­·Î ¹­¾î Ãâ·ÂÇÏ´Â GROUP BY
+-- ê²°ê³¼ ê°’ì„ ì›í•˜ëŠ” ì—´ë¡œ ë¬¶ì–´ ì¶œë ¥í•˜ëŠ” GROUP BY
 SELECT DEPTNO, AVG(SAL), SUM(SAL), MAX(SAL), MIN(SAL)
 FROM EMP
 GROUP BY DEPTNO
@@ -167,7 +167,7 @@ FROM EMP
 GROUP BY DEPTNO, JOB
 HAVING AVG(SAL) >= 1500;
 
-SELECT ENAME, SAL, ROUND(SAL*0.15,2) AS "È¸ºñ"
+SELECT ENAME, SAL, ROUND(SAL*0.15,2) AS "íšŒë¹„"
 FROM EMP
 WHERE SAL BETWEEN 1500 AND 3000;
 
@@ -183,30 +183,37 @@ WHERE SAL > (SELECT AVG(SAL) FROM EMP_COPY);
 
 ROLLBACK;
 
-SELECT DEPTNO, ENAME, SAL, HIREDATE, SAL*1.10 AS ±Þ¿©ÀÎ»ó FROM EMP
+SELECT DEPTNO, ENAME, SAL, HIREDATE, SAL*1.10 AS ê¸‰ì—¬ì¸ìƒ FROM EMP
 WHERE HIREDATE > (SELECT MIN(HIREDATE) FROM EMP);
 
--- 288P Q3: 10¹ø ºÎ¼­ »ç¿ø Áß Æò±Õ ±Þ¿©º¸´Ù ¸¹Àº ±Þ¿©¸¦ ¹Þ´Â Á÷¿øµéÀ» 40¹ø ºÎ¼­·Î ÀÌµ¿
+-- 288P Q3: 10ë²ˆ ë¶€ì„œ ì‚¬ì› ì¤‘ í‰ê·  ê¸‰ì—¬ë³´ë‹¤ ë§Žì€ ê¸‰ì—¬ë¥¼ ë°›ëŠ” ì§ì›ë“¤ì„ 40ë²ˆ ë¶€ì„œë¡œ ì´ë™
 UPDATE EMP_COPY
 SET DEPTNO = 40
 WHERE SAL > (SELECT AVG(SAL) FROM EMP_COPY) AND DEPTNO=10;
--- 288P Q4: 20¹ø ºÎ¼­ »ç¿ø Áß¿¡ ÀÔ»çÀÏÀÌ °¡Àå ºü¸¥ »ç¿øº¸´Ù ´Ê°Ô ÀÔ»çÇÑ »ç¿øÀÇ ±Þ¿©¸¦ 10%ÀÌ»óÇÏ°í 50¹ø ºÎ¼­·Î ÀÌµ¿
+-- 288P Q4: 20ë²ˆ ë¶€ì„œ ì‚¬ì› ì¤‘ì— ìž…ì‚¬ì¼ì´ ê°€ìž¥ ë¹ ë¥¸ ì‚¬ì›ë³´ë‹¤ ëŠ¦ê²Œ ìž…ì‚¬í•œ ì‚¬ì›ì˜ ê¸‰ì—¬ë¥¼ 10%ì´ìƒí•˜ê³  50ë²ˆ ë¶€ì„œë¡œ ì´ë™
 UPDATE EMP_COPY
 SET SAL = SAL*1.10, DEPTNO=50
 WHERE HIREDATE > (SELECT MIN(HIREDATE) FROM EMP_COPY) AND DEPTNO=20;
 
--- 212P Q1 : ºÎ¼­¹øÈ£, Æò±Õ ±Þ¿©, ÃÖ°í ±Þ¿©, ÃÖÀú ±Þ¿©, »ç¿ø ¼ö¸¦ Ãâ·ÂÇÕ´Ï´Ù.
--- ´Ü, Æò±Õ ±Þ¿©¸¦ Ãâ·ÂÇÒ ¶§ ¼Ò¼öÁ¡À» Á¦¿ÜÇÏ°í °¢ ºÎ¼­ ¹øÈ£ º°·Î Ãâ·ÂÇÏ¼¼¿ä.
+-- 212P Q1 : ë¶€ì„œë²ˆí˜¸, í‰ê·  ê¸‰ì—¬, ìµœê³  ê¸‰ì—¬, ìµœì € ê¸‰ì—¬, ì‚¬ì› ìˆ˜ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.
+-- ë‹¨, í‰ê·  ê¸‰ì—¬ë¥¼ ì¶œë ¥í•  ë•Œ ì†Œìˆ˜ì ì„ ì œì™¸í•˜ê³  ê° ë¶€ì„œ ë²ˆí˜¸ ë³„ë¡œ ì¶œë ¥í•˜ì„¸ìš”.
 SELECT DEPTNO, TRUNC(AVG(SAL)), MAX(SAL), MIN(SAL), COUNT(DEPTNO) AS "CNT"
 FROM EMP
 GROUP BY DEPTNO;
--- 212P Q2 : °°Àº Á÷Ã¥¿¡ Á¾»çÇÏ´Â »ç¿øÀÌ 3¸í ÀÌ»óÀÎ Á÷Ã¥°ú ÀÎ¿ø¼ö¸¦ Ãâ·ÂÇÏ¼¼¿ä.
+-- 212P Q2 : ê°™ì€ ì§ì±…ì— ì¢…ì‚¬í•˜ëŠ” ì‚¬ì›ì´ 3ëª… ì´ìƒì¸ ì§ì±…ê³¼ ì¸ì›ìˆ˜ë¥¼ ì¶œë ¥í•˜ì„¸ìš”.
 SELECT JOB, COUNT(JOB)
 FROM EMP
 GROUP BY JOB
 HAVING COUNT(JOB) >= 3;
--- 212P Q3 : »ç¿øµéÀÇ ÀÔ»ç ¿¬µµ(HIRE_YEAR)¸¦ ±âÁØÀ¸·Î ºÎ¼­º°·Î ¸î ¸íÀÌ ÀÔ»çÇß´ÂÁö Ãâ·ÂÇÏ¼¼¿ä.
+-- 212P Q3 : ì‚¬ì›ë“¤ì˜ ìž…ì‚¬ ì—°ë„(HIRE_YEAR)ë¥¼ ê¸°ì¤€ìœ¼ë¡œ ë¶€ì„œë³„ë¡œ ëª‡ ëª…ì´ ìž…ì‚¬í–ˆëŠ”ì§€ ì¶œë ¥í•˜ì„¸ìš”.
+SELECT TO_CHAR(HIREDATE, 'YYYY') AS HIRE_YEAR, DEPTNO, COUNT(HIREDATE)
+FROM EMP
+GROUP BY HIREDATE, DEPTNO;
+-- 213P Q4 : ì¶”ê°€ ìˆ˜ë‹¹(COMM)ì„ ì‚¬ì› ìˆ˜ì™€ ë°›ì§€ ì•ŠëŠ” ì‚¬ì› ìˆ˜ë¥¼ ì¶œë ¥í•˜ì„¸ìš”.
 
--- 213P Q4 : Ãß°¡ ¼ö´ç(COMM)À» »ç¿ø ¼ö¿Í ¹ÞÁö ¾Ê´Â »ç¿ø ¼ö¸¦ Ãâ·ÂÇÏ¼¼¿ä.
-
--- 213P Q5 : °¢ ºÎ¼­ÀÇ ÀÔ»ç ¿¬µµº° »ç¿ø ¼ö, ÃÖ°í ±Þ¿©, ±Þ¿© ÇÕ, Æò±Õ ±Þ¿©¸¦ Ãâ·ÂÇÏ°í °¢ ºÎ¼­º° ¼Ò°è¿Í ÃÑ°è¸¦ Ãâ·ÂÇÏ¼¼¿ä.
+-- 213P Q5 : ê° ë¶€ì„œì˜ ìž…ì‚¬ ì—°ë„ë³„ ì‚¬ì› ìˆ˜, ìµœê³  ê¸‰ì—¬, ê¸‰ì—¬ í•©, í‰ê·  ê¸‰ì—¬ë¥¼ ì¶œë ¥í•˜ê³  ê° ë¶€ì„œë³„ ì†Œê³„ì™€ ì´ê³„ë¥¼ ì¶œë ¥í•˜ì„¸ìš”.
+SELECT DEPTNO, TO_CHAR(HIREDATE, 'YYYY') AS "HIRE_YEAR",
+COUNT(HIREDATE) AS "CNT", MAX(SAL) AS "MAX_SAL", SUM(SAL) AS "SUM_SAL", AVG(SAL) AS "AGV_SAL"
+FROM EMP
+GROUP BY DEPTNO, HIREDATE, SAL
+ORDER BY DEPTNO;
