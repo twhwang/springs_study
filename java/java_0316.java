@@ -80,3 +80,66 @@ public class Ex2_11 {
 		System.out.println(iNum4);
 	}
 }
+
+// 연산자 (증감 연산자2)
+public class Ex2_12 {
+	public static void main(String[] args) {
+		
+		int iNum1 = 100;
+		int iNum2 = 100;
+		int iNum3 = 200;
+		int iNum4 = 200;
+		int iNum5;
+		int iNum6;
+		int iNum7;
+		int iNum8;
+		
+		iNum5 = ++iNum1;
+		iNum6 = iNum2++;
+		
+		iNum7 = --iNum3;
+		iNum8 = iNum4--;
+		
+		System.out.println(iNum1);
+		System.out.println(iNum2);
+		System.out.println("-----Borderline-----");
+		System.out.println(iNum3);
+		System.out.println(iNum4);
+		System.out.println("-----Borderline-----");
+		System.out.println("-----Borderline-----");
+		System.out.println(iNum5);
+		System.out.println(iNum6);
+		System.out.println("-----Borderline-----");
+		System.out.println(iNum7);
+		System.out.println(iNum8);
+	}
+}
+
+// 형변환 연산자
+public class Ex2_13 {
+
+	public static void main(String[] args) {
+		double d = 85.6;
+		int score = (int) d;
+		System.out.println("d=" + d);
+		System.out.println("score=" + score);
+	}
+
+}
+
+// 자동 형변환
+public class Ex2_14 {
+	public static void main(String[] args) {
+		byte bNum = 100; // byte = int
+		short sNum = bNum; // short = byte
+		int iNum = bNum; // int = byte
+		long lNum = bNum; // long = byte
+		// 100은 정수(int)이나 상관없이 컴파일러에서
+		// 자동으로 형을 변환하여 추가하게 되는 것이 '자동 형변환'이다.
+		
+		// 수동 형변환
+		float fNum1 = (float)3.14; // float = double
+		float fNum2 = 3.14f; // 형변환 아님
+		
+	}
+}
