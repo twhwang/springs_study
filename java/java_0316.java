@@ -32,3 +32,51 @@ public class Ex2_7_2 {
 	}
 }
 
+public class Ex2_10_3 {
+	public static void main(String[] args) {
+		byte bNum1 = 127;
+		System.out.println(bNum1);
+		++bNum1; // 2의 보수기법에 의해 -128 (최소값)으로 저장됨
+		System.out.println(bNum1);
+	}
+}
+
+public class Ex2_10_4 {
+	public static void main(String[] args) {
+		char cNum0 = "Apple".charAt(0);
+		char cNum1 = "Apple".charAt(1);
+		char cNum2 = "Apple".charAt(2);
+		char cNum3 = "Apple".charAt(3);
+		char cNum4 = "Apple".charAt(4);
+		
+		System.out.println(cNum0);
+		System.out.println(cNum1);
+		System.out.println(cNum2);
+		System.out.println(cNum3);
+		System.out.println(cNum4);
+	}
+
+}
+
+// 연산자 (증감 연산자)
+public class Ex2_11 {
+	public static void main(String[] args) {
+		
+		int iNum1 = 100;
+		int iNum2 = 100;
+		int iNum3 = 200;
+		int iNum4 = 200;
+		
+		++iNum1;
+		iNum2++;
+		
+		--iNum3;
+		iNum4--;
+		
+		System.out.println(iNum1);
+		System.out.println(iNum2);
+		System.out.println("-----Borderline-----");
+		System.out.println(iNum3);
+		System.out.println(iNum4);
+	}
+}
