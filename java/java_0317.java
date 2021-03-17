@@ -218,3 +218,46 @@ public class p0317_09 {
 		}
 	}
 }
+
+// if-else문
+import java.util.Scanner;
+public class p0317_10 {
+	public static void main(String[] args) {
+		
+		System.out.print("숫자를 하나 입력하시오 >");
+		Scanner scan = new Scanner(System.in);
+		
+		int input = scan.nextInt();
+		
+		if (input==0) {
+			System.out.println("입력하신 숫자는 0입니다.");
+		} else {
+			System.out.println("입력하신 숫자는 0이 아닙니다.");
+		}
+	}
+}
+
+//if-else if문
+import java.util.Scanner;
+public class p0317_11 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		int score = 0; // 점수를 저장하는 변수
+		char grade = ' '; // 등급을 저장하는 변수
+		
+		System.out.print("점수를 입력하시오> ");
+		score = scan.nextInt(); // 입력받은 숫자를 변수 score에 저장
+		
+		if(score >= 90) {
+			grade = 'A';
+		} else if(score >= 80) {
+			grade = 'B';
+		} else if(score >=70) {
+			grade = 'C';
+		} else {
+			grade = 'D';
+		}
+		System.out.println("당신의 학점은 " + grade + " 입니다.");
+	}
+}
