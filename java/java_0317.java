@@ -135,3 +135,86 @@ public class p0317_06_3 {
 		scanner.close();
 	}
 }
+
+// 논리 부정 연산자
+public class p0317_07 {
+	public static void main(String[] args) {
+		boolean b = true;
+		char ch = 'C';
+		
+		System.out.printf("b=%b%n", b);
+		System.out.printf("!b=%b%n", !b);
+		System.out.printf("!!b=%b%n", !!b);
+		System.out.printf("!!!b=%b%n", !!!b);
+		System.out.println(" ");
+		System.out.printf("ch=%c%n", ch);
+		System.out.printf("ch < 'a' || ch > 'z' = %b%n", ch < 'a' || ch > 'z' );
+		System.out.printf("!('a' < ch && ch < 'z') = %b%n", !('a' < ch && ch < 'z'));
+		System.out.printf("'a' < ch && ch < 'z' = %b%n", 'a' < ch && ch < 'z');
+	}
+}
+
+// 조건 연산자
+public class p0317_08 {
+	public static void main(String[] args) {
+		int x, y, z;
+		int absX, absY, absZ;
+		char signX, signY, signZ;
+		
+		x = 10;
+		y = -5;
+		z = 0;
+		
+		absX = x >= 0 ? x : -x;
+		absY = y >= 0 ? y : -y;
+		absZ = z >= 0 ? z : -z;
+		signX = x > 0 ? '+' : (x==0 ? ' ' : '-');
+		signY = y > 0 ? '+' : (y==0 ? ' ' : '-');
+		signZ = z > 0 ? '+' : (z==0 ? ' ' : '-');
+		
+		System.out.printf("x=%c%d%n", signX, absX);
+		System.out.printf("y=%c%d%n", signY, absY);
+		System.out.printf("z=%c%d%n", signZ, absZ);
+	}
+}
+
+// if문
+public class p0317_09 {
+	public static void main(String[] args) {
+		int score = 80;
+	
+		if(score > 60) {
+			System.out.println("점수가 최저 합격점수인 61점 이상이므로 합격입니다.");
+		}
+		
+		int x = 0;
+		System.out.printf("x=%d 일때, 참인 것은%n", x);
+		if(x==0) {
+			System.out.println("x==0");
+		}
+		if(x!=0) {
+			System.out.println("x!=0");
+		}
+		if(!(x==0)) {
+			System.out.println("!(x==0)");
+		}
+		if(!(x!=0)) {
+			System.out.println("!(x!=0)");
+		}
+		
+		x = 1;
+		System.out.printf("x=%d 일때, 참인 것은%n", x);
+		if(x==0) {
+			System.out.println("x==0");
+		}
+		if(x!=0) {
+			System.out.println("x!=0");
+		}
+		if(!(x==0)) {
+			System.out.println("!(x==0)");
+		}
+		if(!(x!=0)) {
+			System.out.println("!(x!=0)");
+		}
+	}
+}
