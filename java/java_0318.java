@@ -189,3 +189,32 @@ public class p0318_04 {
 		}
 	}
 }
+
+// for문
+public class p0318_04_2 {
+	public static void main(String[] args) {
+		for (int i = 1 ; i <=5 ; i++) {
+			System.out.println(i);
+		}
+		for (int i = 1 ; i <=5 ; i++) {
+			System.out.print(i);
+		}
+		System.out.println();
+		int sum = 0;
+		for(int i = 1 ; i <= 5 ; i++) {
+			sum += i ; // sum = sum + i;
+			System.out.printf("1부터 %2d 까지의 합: %2d%n", i, sum);
+		}
+		
+	}
+}
+
+// 구구단 7단 만들기
+public class p0318_04_3 {
+	public static void main(String[] args) {
+		for (int i = 1 ; i <= 9 ; i++){
+		int sum = 7;
+		System.out.printf("%d × %d = %d%n", sum, i, sum * i);
+		}
+	}
+}
