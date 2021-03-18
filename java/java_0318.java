@@ -218,3 +218,17 @@ public class p0318_04_3 {
 		}
 	}
 }
+
+// 구구단
+public class p0318_04_4 {
+	public static void main(String[] args) {
+		for (int sum=2 ; sum<=9 ; sum++) {
+			for (int i=1 ; i<=9 ; i++) {
+				System.out.printf("%d × %d = %2d%n", sum, i, sum*i);
+				if(i==9) {
+					System.out.println("──────────");
+				} // if문 닫기
+			} // 내부 for문
+		} // 외부 for문
+	}
+}
