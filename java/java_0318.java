@@ -166,3 +166,26 @@ public class p0318_02_3 {
 		scan.close();
 	}
 }
+
+// Math.random()
+public class p0318_03 {
+	public static void main(String[] args) {
+		// System.out.println( Math.random() );
+		int Num;
+		Num = (int) (Math.random() * 100);
+		System.out.println(Num);
+		Num = (int) (Math.random() * 100);
+		System.out.println(Num);
+		Num = (int) (Math.random() * 100);
+		System.out.println(Num);
+	}
+}
+
+// for문
+public class p0318_04 {
+	public static void main(String[] args) {
+		for (int i = 1 ; i <= 10 ; i++) {
+			System.out.println("안녕, 세상! " + i);
+		}
+	}
+}
