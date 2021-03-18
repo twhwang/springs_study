@@ -2,13 +2,13 @@
 import java.util.Scanner;
 public class p0318_01 {
 	public static void main(String[] args) {
-		int score = 0;
-		char grade = ' ', opt = ' ';
+		int score = 0; // 점수 변수
+		char grade = ' ', opt = ' '; // 학점 변수
 		
 		System.out.print("점수를 입력하시오. >");
 		
 		Scanner scan = new Scanner(System.in);
-		score = scan.nextInt();
+		score = scan.nextInt(); // 화면을 통해 입력받은 점수를 score에 저장
 		
 		System.out.printf("당신의 점수는 %d입니다.", score);
 		
