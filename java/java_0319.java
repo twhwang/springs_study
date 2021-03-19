@@ -214,3 +214,32 @@ public class p0319_06 {
 		System.out.println("이 객체는 여름이라 한다.");
 	}
 }
+
+// 객체(Method)
+public class p0319_07 {
+	public static void main(String[] args) {
+		int A;
+		Spring();
+		A = Spring();
+		System.out.println(A);
+		Summer();
+		A = Summer();
+		System.out.println(A);
+		double D;
+		D = Autumn();
+		System.out.println(D);
+	}
+	static int Spring () {
+		System.out.println("번호A");
+		return 100; // 반환값
+	}
+	static int Summer () {
+		System.out.println("번호B");
+		return 10000; // 반환값
+	}
+	static double Autumn () {
+		System.out.println("번호C");
+		return 3.14; // 반환값
+	}
+	
+}
