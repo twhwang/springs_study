@@ -199,3 +199,18 @@ public class p0319_05 {
 		}
 	}
 }
+
+// 객체(Method)
+public class p0319_06 {
+	public static void main(String[] args) {
+		System.out.println("Here is main method.");
+		Spring(); // Method 'Spring'를 호출한다.
+		Summer();
+	}
+	static void Spring () {
+		System.out.println("This method called 'Spring'.");
+	}
+	static void Summer () {
+		System.out.println("이 객체는 여름이라 한다.");
+	}
+}
