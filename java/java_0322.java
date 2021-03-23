@@ -168,3 +168,25 @@ public class p0322_06 {
 		System.out.println(bStr.length());
 	}
 }
+
+class Spring{
+	int iNum1 = 100; // 인스턴스(객체)의 변수
+	int iNum2;
+	int iNum3 = 100;
+	String aStr; // Heap(객체 영역)은 변수의 초기화가 0, Null으로 설정되어 있다.
+}
+public class p0322_07 {
+	public static void main(String[] args) {
+		
+		/*
+		int iNum1 = 100; // 지역변수 초기화
+		int iNum2; // 지역변수는 초기화없이 사용할 수 없다.
+		int iNum3 = 100;
+		*/
+
+		Spring aSp = new Spring();
+		
+		System.out.printf("%d, %d, %d, %s",
+				aSp.iNum1, aSp.iNum2, aSp.iNum3, aSp.aStr);
+	}
+}
