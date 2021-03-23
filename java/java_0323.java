@@ -214,3 +214,83 @@ public class p0323_04 {
 		return Val1 + Val2;
 	}
 }
+
+// 디폴트 생성자 관련
+// 1. 디폴트 생성자는 프로그래머가 작업하지 않으면 컴파일러가 만들어 줌
+// 2. 다른 생성자가 1개라도 존재할 경우 컴파일러는 디폴트 생성자를 만들지 않음
+public class p0323_05 {
+	public static void main(String[] args) {
+		
+		Spring spring = new Spring();
+		
+	}
+}
+class Spring {
+	Spring(){
+		
+	}
+	Spring(int iNum){
+		System.out.println("생성자 구동 : " + iNum);
+	}
+}
+
+// this.의 사용
+class SpringMember{
+	String name;
+	String mobile;
+	String major;
+	
+	// 인스턴스 변수와 지역 변수는 동일한 이름을 사용할 수 없다.
+	SpringMember(String name, String mobile, String major){
+		this.name = name;
+		this.mobile = mobile;
+		this.major = major;
+	} // this(현재 코드를 실행하는 객체를 나타냄)
+	
+	void State(){
+		System.out.println("이름 : " + name);
+		System.out.println("전번 : " + mobile);
+		System.out.println("특기 : " + major); // 원래는 this.인스턴스 변수명을 적어야 하지만
+		                                       // 통상적으로 그냥 생략함
+	}
+	
+}
+public class p0323_06 {
+	public static void main(String[] args) {
+		SpringMember obj = new SpringMember("홍길동", "010-1234-5678", "자바 프로그래밍");
+		obj.State();
+	}
+}
+
+// this()의 사용법
+class SpringMemberA{
+	String name;
+	String mobile;
+	String major;
+
+	SpringMemberA(String name, String mobile, String major){
+		this.name = name;
+		this.mobile = mobile;
+		this.major = major;
+	}
+	
+	SpringMemberA(String name, String mobile){
+		this(name, mobile, "자바"); //생성자를 호출
+		// 1. 무조건 생성자 첫 줄에만 사용할 수 있다.
+		//this.name = name;
+		//this.mobile = mobile;
+		//this.major = "자바";
+	}
+	
+	void State(){
+		System.out.println("이름 : " + name);
+		System.out.println("전번 : " + mobile);
+		System.out.println("특기 : " + major);
+	}
+}
+public class p0323_07 {
+	public static void main(String[] args) {
+		SpringMemberA obj = new SpringMemberA("홍길동", "010-1234-5678");
+		obj.State();
+	}
+}
