@@ -29,8 +29,15 @@ public class BookManager {
 					insertBook();
 					continue;
 				case '3' : // 3번
+					removeBook();
 					continue;
 				case '4' : // 4번
+					int i = searchBook();
+					if(-1 != i) {
+						System.out.println(aBook[i]);
+					} else {
+						System.out.println("해당하는 책을 찾을 수 없습니다.");
+					}
 					continue;
 				case 'X' : // 종료
 					System.out.println("도서 관리 시스템을 종료합니다...");
@@ -112,8 +119,24 @@ public class BookManager {
 		
 	} // 3번 삭제
 	
-	private void searchBook() {
-		
+	private int searchBook() {
+		String bName;    // 책제목
+		Scanner aScanner = new Scanner(System.in);
+		while (true) {
+			System.out.print("책 이름 : ");
+			bName = aScanner.nextLine();
+			if(0 == bName.length()) {
+				System.out.println("올바른 책 이름을 입력하세요.");
+				continue;
+			}
+			break;
+		}
+		for(int i = 0 ; i < aBook.length ; i++) {
+			if(aBook[i].equals(bName)) {
+				return i;
+			}
+		}
+		return -1; // 검색 실패 시
 	} // 4번 검색
 	
 }
