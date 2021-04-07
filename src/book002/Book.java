@@ -1,4 +1,4 @@
-package book2;
+package book002;
 
 public class Book {
 	private String bName;    // 책제목
@@ -25,5 +25,4 @@ public class Book {
 	public String toString() {
 		return "이름 : " + bName + "\n저자 : " + author + "\n출판 : " + publ;
 	}
-	
 }

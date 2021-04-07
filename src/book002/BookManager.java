@@ -1,4 +1,4 @@
-package book2;
+package book002;
 
 import java.util.Scanner;
 
@@ -29,7 +29,7 @@ public class BookManager {
 					insertBook();
 					continue;
 				case '3' : // 3번
-					removeBook();
+					removeBook(0);
 					continue;
 				case '4' : // 4번
 					int i = searchBook();
@@ -107,15 +107,21 @@ public class BookManager {
 	
 	private void insertBook() {
 		Book bTemp = bookInput();
-		Book [] newBook = new Book[aBook.length +1];
+		Book [] newBook = new Book[aBook.length + 1];
 		for (int i = 0 ; i < aBook.length ; i++) {
 			newBook[i] = aBook[i];
 		}
 		newBook[aBook.length] = bTemp;
 		aBook = newBook;
 	} // 2번 추가
-	
-	private void removeBook() {
+		
+	private void removeBook(int iIndex) {
+		iIndex = 0; // 삭제 예정인 라인
+		Book [] delTemp = new Book [aBook.length - 1];
+		for (int i = 0 ; i < delTemp.length ; i++) {
+			delTemp[i] = aBook[i+1];
+		}
+		aBook = delTemp;
 		
 	} // 3번 삭제
 	

@@ -1,4 +1,4 @@
-package book2;
+package book002;
 
 public class Run {
 	public static void main(String[] args) {

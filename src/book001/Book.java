@@ -1,5 +1,5 @@
 package book001;
-
+// 목록, 추가, 검색, 종료까지 완성
 public class Book {
 	private String bName;    // 책제목
 	private String author;     // 저자
