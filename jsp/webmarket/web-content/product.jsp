@@ -31,7 +31,7 @@
     				Product product = LOP.get(i);
     		%>
     		<div class="col-md-4">
-    			<p><%=product.getProductId() %>
+    			<img src="C:/Users/admin/Documents/htw/java/ee_work/webMarket/WebContent/upload/<%=product.getFilename()%>" style="width:100%">
     			<h3><%=product.getPname()%></h3>
     			<p><%=product.getDescription() %>
     			<p><%=product.getUnitPrice() %>원
